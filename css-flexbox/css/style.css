@@ -41,17 +41,17 @@ nav a {
 /* how to make our li elements into inline or inline-block*/
 nav li {
 
-    font-weight: 200px;
+    font-weight: 200;
 
     /* Example 2 - make it inline */
     /* display: inline;
-    width: 200px;
-    height: 50px; */
+    /* width:5%;
+    height: 50px; */ 
     
     /* Example 3 */
-    /* display: inline-block;
-    width: 200px;
-    height: 50px; */
+    display: inline-block;
+    width: 100px;
+    height: 50px;
     
 
     /* Example 3a */
@@ -63,9 +63,9 @@ nav li {
     /* Example 3b - make it look nicer */
     /* adding border; */
 
- /* border: 5px double white;
+    border: 1px dotted white;
     margin: 10px;
-    padding: 10px;  */
+    padding: 10px; 
 }
 
 /* about section */
@@ -75,15 +75,15 @@ nav li {
     /* Example 4 - show where padding, border margin are */
     /* adding padding */
 
-    /* padding: 1em; */
+    padding: 3em;
 
     /* adding border */
 
-    /* border: 3px dashed rebeccapurple; */
+    border: 3px dashed rebeccapurple;
 
     /* adding margin */
 
-    /* margin: 1em; */
+    margin: 1em;
 }
 
 
@@ -98,9 +98,9 @@ nav li {
 
 /* Example 5 demo of last child psuedo selector */
 
-/* .jobs .card:last-child {
-    border-bottom: 5px solid black;
-} */
+.jobs .card:last-child {
+    border-left: 5px solid red;
+}
 
 /* Example 6 demo of nth-child */
 /* .jobs .card:nth-child(odd) {
@@ -115,10 +115,20 @@ footer {
 /* Example 7 - see how using percentages can be unintuitive */
 /* fun example using font percentage */
 
-/* html {
+html {
     font-size: 62.5%
 }
 
 span {
-    font-size: 1.6rem;
-} */
+    font-size: 1.6em;
+}
+
+
+.roboto-unique {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
