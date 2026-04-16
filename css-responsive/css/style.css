@@ -110,3 +110,41 @@ main {
 footer {
     font-size: smaller;
 }
+
+@media (min-width: 768px) {
+    body {
+        background-color: lightpink;
+    }
+
+    .jobs .card {
+        background-color: white;;
+        flex-basis: 50%;
+        margin:0;
+    }
+
+    main {
+        display: flex;
+    }
+
+    /* example 4 */
+    .jobs img {
+        display: block;
+    }
+    
+}
+
+@media (min-width: 992px) { 
+    .jobs .card {
+        flex-basis: 33%;
+        background-color: lightblue;
+    
+    }
+}
+
+@media (min-width: 1200px) { 
+    .jobs .card {
+        flex-basis: 25%;
+        background-color: lightgreen;
+    
+    }
+}
