@@ -5,7 +5,7 @@
 
 // console.log("The days are getting longer")
 
-// // // Slide 16 - dynamically typed
+// // // // Slide 16 - dynamically typed
 //  let myDogName = "Jovie";
 //  console.log(myDogName);
 //  console.log(typeof(myDogName));
@@ -14,7 +14,7 @@
 //  console.log(myDogName);
 //  console.log(typeof(myDogName));
 
-//  //create a variable (not assigned)
+// //  //create a variable (not assigned)
 // let hoursSlept; 
 // console.log(hoursSlept); //=> undefined
 
@@ -49,7 +49,7 @@
 // //Booleans
 // const likesCode = true;
 
-// //Arrays
+// // //Arrays
 // const letters = ['a', 'b', 'c']; //literal syntax
 // const things = ['raindrops', 2.5, true, [3,4,3]]; //mix types
 // console.log(letters[0]); //'a'
@@ -65,10 +65,10 @@
 // console.log(myArray);
 // console.log(myArray[2])
 
-// // Slide 20 - Nested Arrays
-// // an array of different dinners available at a fancy party
-// // this list has 4 elements, each of which is a list of 3 elements
-// // the indentation is just for human readability
+// Slide 20 - Nested Arrays
+// an array of different dinners available at a fancy party
+// this list has 4 elements, each of which is a list of 3 elements
+// the indentation is just for human readability
 // const dinnerOptions = [
 //     ['chicken', 'mashed potatoes', 'mixed veggies'],
 //     ['steak', 'seasoned potatoes', 'asparagus'],
@@ -120,7 +120,7 @@
 // console.log(var1, var2, var3, var4);
 // console.log(var1 + " " + var2 + var3 + var4);
 
-// // Slide 22
+// // // Slide 22
 // const ages = {'sarah':42, amit:35, zhang:13};
 
 // const myVar = 'sarah';
@@ -209,17 +209,17 @@
 // }
 
 
-// // Slide 25
-// const person = {
-//     firstName: 'Alice',
-//     lastName: 'Wong',
-//     age: 40,
-//     favorites: {
-//       music: 'jazz',
-//       food: 'pizza',
-//       numbers: [12, 42]
-//     }
-//   };
+// Slide 25
+const person = {
+    firstName: 'Alice',
+    lastName: 'Wong',
+    age: 40,
+    favorites: {
+      music: 'jazz',
+      food: 'pizza',
+      numbers: [12, 42]
+    }
+  };
   
 //   const name = person['firstName']; //get value of 'firstName' key
 //   console.log(name);
@@ -227,15 +227,15 @@
 //   console.log(person['firstName']+' '+person['lastName']); //"Alice Jones"
   
   
-// //   const favFood = person['favorites'][inputtedValue]; //object in the object
-// //                   //object           //value
+//   const favFood = person['favorites'][inputtedValue]; //object in the object
+//                   //object           //value
   
-//   const firstNumber = person['favorites']['numbers'][0]; //12
+  const firstNumber = person['favorites']['numbers'][0]; //12
 
-//   console.log(firstNumber);
-//   person['favorites']['numbers'].push("56"); //push 'hey' onto the Array
+  console.log(firstNumber);
+  person['favorites']['numbers'].push("56"); //push 'hey' onto the Array
 
-//   console.log(person['favorites']['numbers']);
+  console.log(person['favorites']['numbers']);
 
 
 // //Slide 26 Accessing Properties (dot notation)
