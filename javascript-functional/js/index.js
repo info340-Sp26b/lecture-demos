@@ -1,7 +1,7 @@
 'use strict';
 
 
-// // review from last lecture (stuff i didn't talk much about)
+// // // review from last lecture (stuff i didn't talk much about)
 // // review - Accessing object properties with bracket notation
 // const person = {
 //   firstName: 'Alice',
@@ -11,7 +11,7 @@
 //     music: 'jazz',
 //     food: 'pizza',
 //     numbers: [12, 42]
-//   }
+//   } 
 // };
 
 // const name = person['firstName']; //get value of 'firstName' key
@@ -21,6 +21,7 @@
 // const chosenValue = "food" //e.g., from user input
 // const favFood = person['favorites'][chosenValue]; //object in the object
 //                 //object           //value
+// console.log(favFood); //pizza
 
 // const firstNumber = person['favorites']['numbers'][0]; //12
 // person['favorites']['numbers'].push(7); //push 7 onto the Array
@@ -42,7 +43,7 @@
 // console.log(person.firstName+' '+person.lastName); //"Alice Jones"
 
 // const chosenValue = "food" //e.g., from user input
-// const favFood = person.favorites.chosenValue; //undefined!!
+// const favFood = person.favorites[chosenValue]; //undefined!!
 //               //object         //value
 
 // const firstNumber = person.favorites.numbers[0]; //12
@@ -93,13 +94,13 @@
 
 
 
-const peopleArray = [
-  {name: 'Ada', height: 64, weight: 135},
-  {name: 'Bob', height: 74, weight: 156, pronoun: 'they/them'},
-  {name: 'Chris', height: 69, weight: 139},
-  {name: 'Diya', height: 69, weight: 144},
-  {name: 'Emma', height: 71, weight: 152}
-]
+// const peopleArray = [
+//   {name: 'Ada', height: 64, weight: 135},
+//   {name: 'Bob', height: 74, weight: 156, pronoun: 'they/them'},
+//   {name: 'Chris', height: 69, weight: 139},
+//   {name: 'Diya', height: 69, weight: 144},
+//   {name: 'Emma', height: 71, weight: 152}
+// ]
 
 // console.log("peopleArray :", peopleArray);
 // console.log("typeof peopleArray: ", typeof peopleArray);
@@ -143,15 +144,15 @@ const peopleArray = [
 
 // console.log( [4,5,6] ); //pass in anonymous value
 
-// // //named function
-// // function sayHello(person){ 
-// //   console.log("Hello, "+person); 
-// // }
+// //named function
+// function sayHello(person){ 
+//   console.log("Hello, "+person); 
+// }
 
-// // //anonymous function (no name! so in this state its invalid) 
-// // function (person) {
-// //   console.log("Hello, "+person);
-// // }
+// //anonymous function (no name! so in this state its invalid) 
+// function (person) {
+//   console.log("Hello, "+person);
+// }
 
 // //anonymous function (value) assigned to variable
 // const sayHello = function(person) {
@@ -174,14 +175,16 @@ const peopleArray = [
 // //assign function to object
 // obj.sayHi = sayHello;
 
+// console.log("obj :", obj);
+
 // // note that this is a function off of the obj
 // console.log("obj.sayHi: ", obj.sayHi)
 
 // //access (run) with dot notation
 // obj.sayHi('all'); //prints "Hello all"
 
-// //here's the object. It has the one function we assigned above
-// console.log("obj : ", obj);
+// // //here's the object. It has the one function we assigned above
+// // console.log("obj : ", obj);
 
 
 // //Now assign another function as a literal (anonymous value)
@@ -195,7 +198,7 @@ const peopleArray = [
 // //run it
 // obj.otherFunc();
 
-// // // slide 13
+// // // // slide 13
 
 // function sayHello(name) { 
 //   console.log("Hello, "+name);
@@ -208,8 +211,8 @@ const peopleArray = [
 //   aFunction("world");
 // }
 
-// // //call function and pass value
-// // doWorld(sayHello); //prints "Hello world"
+// //call function and pass value
+// doWorld(sayHello); //prints "Hello world"
 
 
 // //pass literal (anonymous value)
@@ -251,8 +254,8 @@ const peopleArray = [
 //   console.log('rub your belly');
 // }
 
-// // pass in the callbacks to do them together
-// doTogether(patHead, rubBelly);
+// // // pass in the callbacks to do them together
+// // doTogether(patHead, rubBelly);
 
 // // doTogether(rubBelly, patHead);
 // doTogether(rubBelly, patHead());
@@ -261,16 +264,16 @@ const peopleArray = [
 // // Slide 16
 
 // //Arbitrary list of people's names, heights, and weights
-// let peopleArray = [ {name: 'Ada', height: 64, weight: 200},
-//                     {name: 'Bob', height: 54, weight: 199},
-//                     {name: 'Chris', height: 69, weight: 139},
-//                     {name: 'Diya', height: 69, weight: 144},
-//                     {name: 'Emma', height: 71, weight: 152}];
+let peopleArray = [ {name: 'Ada', height: 64, weight: 200},
+                    {name: 'Bob', height: 54, weight: 199},
+                    {name: 'Chris', height: 69, weight: 139},
+                    {name: 'Diya', height: 69, weight: 144},
+                    {name: 'Emma', height: 71, weight: 152}];
 
 // console.log('**-Initial**');
-// peopleArray.forEach(function (person) { console.log(person)})
+// // peopleArray.forEach(function (person) { console.log(person)})
 
-// // // peopleArray.forEach((person) => console.log(person))
+// // peopleArray.forEach((person) => console.log(person))
 
 // //a function to "sort" people objects. Returns
 // //  < 0 if A comes before B, 
@@ -290,7 +293,7 @@ const peopleArray = [
 // peopleArray.sort(sortByHeightFunction); //sorts in place!
 
 // peopleArray.forEach(function (person) { console.log(person.name, person.height)})
-// // peopleArray.forEach((person) => console.log(person))
+// // // peopleArray.forEach((person) => console.log(person))
 
 // function sortByWeightFunction(personA, personB) {
 //   if(personA.weight < personB.weight) {
@@ -323,14 +326,14 @@ const peopleArray = [
 //    console.log(item);
 // });
 
-// //Slide 18 forEach() callbacks
+// // //Slide 18 forEach() callbacks
 
 // //Iterate through an array
 // const myArray = ['a','b','c'];
 
-// // myArray.forEach(function(theItem){
-// //   console.log(theItem);
-// // })
+// // // myArray.forEach(function(theItem){
+// // //   console.log(theItem);
+// // // })
 
 // // now with all the available arguments
 // myArray.forEach(function(theItem, index, theArray) {
@@ -346,33 +349,32 @@ const peopleArray = [
 
 // //Slide 19 Mapping
 
-// // function square(n) { //a function that squares a number
-// //   return n*n;
-// // }
+// function square(n) { //a function that squares a number
+//   return n*n;
+// }
 
 // const numbers = [1,2,3,4,5];  //an initial array
 // console.log(numbers);
 
 // // //transform the numbers using the square() function
-// // const squares = []; //the transformed array
-// // for(let i=0; i<numbers.length; i++) {
-// //  const transformed = square(numbers[i]);
-// //  squares.push(transformed); //add transformed to array
-// // }
-// // console.log(squares); // [1, 4, 9, 16, 25]
+// const squares = []; //the transformed array
+// for(let i=0; i<numbers.length; i++) {
+//  const transformed = square(numbers[i]);
+//  squares.push(transformed); //add transformed to array
+// }
+// console.log(squares); // [1, 4, 9, 16, 25]
 
-//TEMPLATE
-/*
-const newArray = oldArray.map(function(item){
-  const transformed = ...
-  return transformed;
-});
-*/
+// //TEMPLATE
 
-// // map the numbers using the named callback function
+// const newArray = oldArray.map(function(item){
+//   const transformed = ...
+//   return transformed;
+// });
+
+// map the numbers using the named callback function
 // const squares = numbers.map(square);
 
-// // or more commonly, map the numbers using anonymous callback function
+// or more commonly, map the numbers using anonymous callback function
 // const squares = numbers.map(function(n) {
 //     return n*n;
 // })
@@ -381,7 +383,9 @@ const newArray = oldArray.map(function(item){
 // console.log(squares); // [1, 4, 9, 16, 25]
 
 
-// // another  example with peopleArray:
+// another  example with peopleArray:
+
+console.log(peopleArray);
 
 // const alteredPeopleArray = peopleArray.map(function (personObj) {
 //   const personName = "hi " + personObj.name
@@ -419,7 +423,7 @@ const newArray = oldArray.map(function(item){
 
 // console.log(peopleGreetings);
 
-// Slide 21 - Filtering
+// // Slide 21 - Filtering
 
 // const array = [3,1,4,2,5];
 // console.log(array);
@@ -457,7 +461,7 @@ const newArray = oldArray.map(function(item){
 
 
 
-// Slide 22 - Reducing
+// // Slide 22 - Reducing
 
 // const letters = ['a','b','c','d','e'];  //an initial array
 // function link(accumulation, newItem) { //combines two strings
@@ -471,16 +475,16 @@ const newArray = oldArray.map(function(item){
 // }
 // console.log(linked); //"->a->b->c->d->e"
 
-// // // Slide 23 - Reducing
-// const letters = ['a','b','c','d','e'];  //an initial array
-// function link(accumulation, newItem) { //combines two strings
-//   const newAccumulation = accumulation + "->" + newItem;
-//   return newAccumulation;
-// }
+// // Slide 23 - Reducing
+const letters = ['a','b','c','d','e'];  //an initial array
+function link(accumulation, newItem) { //combines two strings
+  const newAccumulation = accumulation + "->" + newItem;
+  return newAccumulation;
+}
 
-// const linked = letters.reduce(link, ""); //pass func, starting value
+const linked = letters.reduce(link, ""); //pass func, starting value
 
-// console.log(linked); //"->a->b->c->d->e"
+console.log(linked); //"->a->b->c->d->e"
 
 // // accumulate example with peopleArray
 // function accumulate(accumulation, personObj) {
