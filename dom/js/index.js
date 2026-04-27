@@ -254,40 +254,8 @@ const songArray = [
 //   renderPuppy();
 // });
 
-// // Slide 25 - Using state to keep track if puppy is showing
 
-// //STATE (should be at top of file)
-// let puppyShown = true;
-
-// const hideButton = document.querySelector('#puppySection button');
-
-// function renderPuppy() {
-//   //clear out the previous content befor rendering
-//   const puppyContainer = document.querySelector('#puppySection div');
-//   puppyContainer.innerHTML = '';
-
-//   if (puppyShown) {
-//     const imgElement = document.createElement('img');
-//     imgElement.src = 'img/puppy.jpg';
-//     imgElement.alt = 'a cute puppy';
-//     puppyContainer.appendChild(imgElement);
-//     document.querySelector('#puppySection button').textContent = 'Hide';
-//   }
-//   else { //not shown
-//     document.querySelector('#puppySection button').textContent = 'Show';
-//   }
-// }
-
-// renderPuppy();
-
-// hideButton.addEventListener('click', function (event) {
-//   //change the state
-//   puppyShown = !puppyShown;
-//   //rerender
-//   renderPuppy();
-// });
-
-// // Slide 28 - Form
+// // Slide 27 - Form
 // const formElement = document.querySelector('#formSection form');
 
 // //listen for submit events
@@ -300,7 +268,7 @@ const songArray = [
 //   //... do something with that value!
 // });
 
-// //Slide 28A
+// //Slide 27A
 // //(note I'm readding createSongListItem and renderSongList here
 // //because it was commented out above to make these examples independent
 // // note that the render songlist now clears out the section first before
@@ -365,7 +333,7 @@ const songArray = [
 // });
 
 
-// //Slide 29
+// //Slide 28
 // //Another look at this where I use map to tranform the json into a an array of songLI's
 
 // renderSongList(songArray);
