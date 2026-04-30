@@ -106,31 +106,31 @@ console.log(peopleArray);
 //   }
 //   console.log(foo1("Fred"));
 
-//   //normal concise arrow declaration
-//   const foo2 = (params) =>  'foo '+params;
+  // //normal concise arrow declaration
+  // const foo2 = (params) =>  'foo '+params;
   
-//   console.log(foo2("Wilma"));
+  // console.log(foo2("Wilma"));
   
-// const foo3 = () => {console.log("hey jude")}
+// const foo3 = params => console.log(params);
 
 // console.log(foo3());
 
 
-//   // Slide 13
-//   //destructuring arrays
-// const myArray = [1, 2, 3, 5];
+// //   // Slide 13
+// // //   //destructuring arrays
+// const myArray = [1, 2];
 // const [x, y, z] = myArray; //myArray elements to `x`, `y`, `z`
 // console.log(x); //=> 1;
 // console.log(y); //=> 2;
 // console.log(z); //=> 3;
 
 // //destructuring objects
-// const myObject = {a: "dude", b: "surf", c: "hey"};
-// const {a, b, c} = myObject; //myObject.a to a, etc.
-// console.log(a); //=> "dude";
-// console.log(b); //=> "surf";
-// console.log(c); //=> "hey";
-
+// const myObject = {a: "dude", b: "surf", c: "hey", dog: "jovie"};
+// const {dog, a, b, c} = myObject; //myObject.a to a, etc.
+// console.log("a :", a); //=> "dude";
+// console.log("b :", b); //=> "surf";
+// console.log("c :", c); //=> "hey";
+// console.log("dog :", dog); //=> "jovie";
 // Slide 14
 // // 2 Examples of the reduce method using the destructuring as well
 
@@ -139,7 +139,8 @@ console.log(peopleArray);
 // const ratioAvg = peopleArray.reduce(function (oldRunningTotal, peopleObj, idx, array) {
 
 //     const {height, weight} = peopleObj; //destructuring
-
+// // const myheight = peopleObj.height;
+// // const myweight = peopleObj.weight;
 //     const ratio = height / weight;
 
 //     const newAvgRatio= oldRunningTotal + ratio/array.length;
@@ -167,28 +168,29 @@ console.log(peopleArray);
 // const dimensions = [10, 20, 30, 40];
 // //extra values are "spread" into destructuring slots
 // const [width, height, ...rest] = dimensions 
-// console.log(width);  //=> 10
-// console.log(height); //=> 20
-// console.log(rest);   //=> [30, 40]; the rest of the values!
-// console.log(rest[1])
+// console.log("width:", width);  //=> 10
+// console.log("height:", height); //=> 20
+// console.log("rest:", rest);   //=> [30, 40]; the rest of the values!
+// console.log("rest[1]:", rest[1]);
 
 // //Spread with an object
-// const person = {name: 'Ada', height: 64, weight: 135}
-// console.log(person)
-// const copyOfPerson = {...person}; //clone an object!
-// console.log(copyOfPerson);
+const person = {name: 'Ada', height: 64, weight: 135}
+// console.log("person:", person);
 
-// console.log(person === copyOfPerson); //false! different objects!
+// const copyOfPerson = {...person}; //clone an object!
+// console.log("copyOfPerson:", copyOfPerson);
+
+// console.log("person === copyOfPerson:", person === copyOfPerson); //false! different objects!
 
 // //all off the properties are "spread" into the new object
 // const personWithHat = {hat: 'baseball', ...person}
 // console.log(person); //has name, height, weight
 // console.log(personWithHat); //has name, height, weight, hat
 
-// const tallerAda = {...person, height: 74};
+// const tallerAda = {height: 74, ...person};
 // console.log(tallerAda);
 
- 
+//  console.log("string1", "hello", "string2", "world", "string3", "!!!");
 
 // //Slide 17
 // //a function that adds up all the arguments (no matter how many!)

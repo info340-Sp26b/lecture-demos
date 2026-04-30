@@ -1,6 +1,6 @@
 'use strict';
 
-const animalArray = ["dog", "cat", "goldfish"];
+export const animalArray = ["dog", "cat", "goldfish"];
 
 console.log("I'm the index.js file!");
 

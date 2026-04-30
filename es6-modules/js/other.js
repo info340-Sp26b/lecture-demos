@@ -2,7 +2,7 @@
 // const animalArray = ["dog", "cat", "goldfish"];
 console.log("I'm the other.js file!");
 
-// import {animalArray} from './index.js';
+import {animalArray} from './index.js';
 
 // // Slide 18a
 // console.log("Animal Array: ", animalArray)
