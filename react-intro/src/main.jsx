@@ -78,25 +78,39 @@ import './index.css';
 //     return (
 //         <div>
 //             <header>
-//                 <h1>React Demo Header</h1>
+//                 <h1>React Pet Header</h1>
 //             </header>
 //         </div>);
 // }
 
-// function HelloMessage(props) {
-//     return <li>Hello World!</li>;
+// function KittenPuppyMessage(props) {
+//       const puppyImgUrl = "/img/puppy-kitty.jpg"
+//     return (
+    
+//       <div>
+//         <img src={puppyImgUrl} alt="a cute puppy and kitten" />
+//         <h3>Kitten and Puppy</h3>
+//       </div>
+//       )
 // }
 
-// function GoodbyeMessage(props) {
-//     return <li>See ya later!</li>;
+// function PuppyMessage(props) {
+//     const puppyImgUrl = "/img/puppy.jpg"
+//     return (
+    
+//       <div>
+//         <img src={puppyImgUrl} alt="a cute puppy" />
+//         <h3>Puppy</h3>
+//       </div>
+//       )
 // }
 
-// function MessageList(props) {
+// function PetList(props) {
 //     return (
 //         <div>
 //             <ul>
-//                 <HelloMessage /> {/* A HelloMessage component */}
-//                 <GoodbyeMessage /> {/* A GoodbyeMessage component */}
+//                 <KittenPuppyMessage /> {/* A KittenPuppyMessage component */}
+//                 <PuppyMessage /> {/* A PuppyMessage component */}
 //             </ul>
 //         </div>
 //     );
@@ -105,7 +119,7 @@ import './index.css';
 // const content =
 //     <>
 //         <HeaderComponent />
-//         <MessageList />
+//         <PetList />
 //     </>
 
 // const root = ReactDOM.createRoot(document.getElementById('root'));
