@@ -10,6 +10,94 @@ export default function App(props) {
 }
 
 
+// // Example Slide 7 (Properties (props))
+
+// function Greeting(props) {
+//   console.log("props:", props);
+// //  {name, language} = props;
+
+//   return (
+//     <section>
+//       <h2>Hello, {props.name}!</h2>
+//       <p>Your favorite language is {props.language}.</p>
+//     </section>
+//   );
+// }
+
+// export default function App() {
+//   return (
+//     <main>
+//       <h1>Props Example</h1>
+
+//      <Greeting name="Maya" language="JavaScript" schoolStanding="Junior" />
+//      <Greeting name="Diego" language="Python" schoolStanding="Senior" />
+//      <Greeting name="Ava" language="Java" schoolStanding="Sophomore" />
+//     </main>
+//   );
+// }
+
+// // Example Slide 7a (Destructuring props)
+
+// function Greeting({ name, language }) {
+//   console.log("props:", { name, language });
+//   return (
+//     <section>
+//       <h2>Hello, {name}!</h2>
+//       <p>Your favorite language is {language}.</p>
+//     </section>
+//   );
+// }
+
+// // // Example Slide 7b (composition using maps)
+// const students = [
+//   { name: "Maya", language: "JavaScript" },
+//   { name: "Diego", language: "Python" },
+//   { name: "Ava", language: "Java" }
+// ];
+
+// function Greeting({ name, language }) {
+//   return (
+//     <section>
+//       <h2>Hello, {name}!</h2>
+//       <p>Your favorite language is {language}.</p>
+//     </section>
+//   );
+// }
+
+// export default function App() {
+
+//   // transform data into an array of React elements
+//   const greetingElements = students.map((student) => {
+//     return (
+//       <Greeting
+//         name={student.name}
+//         language={student.language}
+//       />
+//     );
+//   });
+
+//   return (
+//     <main>
+//       <h1>Props + Map Example</h1>
+
+//       {/* render the array of elements */}
+//       {greetingElements}
+//     </main>
+//   );
+// }
+
+// export default function App() {
+//   return (
+//     <main>
+//       <h1>Props Example</h1>
+
+//       <Greeting name="Maya" language="JavaScript" schoolStanding="Junior" />
+//       <Greeting name="Diego" language="Python" schoolStanding="Senior" />
+//       <Greeting name="Ava" language="Java" schoolStanding="Sophomore" />
+//     </main>
+//   );
+// }
+
 // // Example Slide 14
 
 // export default function App(props) {
