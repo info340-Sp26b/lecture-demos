@@ -1,25 +1,25 @@
-import React from 'react';
+// import React from 'react';
 // import { HeaderBar } from './HeaderBar';
 // import { ChannelList } from './ChannelList';
 // import { ChatPane } from './ChatPane';
 
-export default function App(props) {
-  return (
-    <div>Hello App</div>
-  );
-}
-
-
-// // Example Slide 7 (Properties (props))
-
-// function Greeting(props) {
-//   console.log("props:", props);
-// //  {name, language} = props;
-
+// export default function App(props) {
 //   return (
+//     <div>Hello App</div>
+//   );
+// }
+
+
+// // // Example Slide 7 (Properties (props))
+
+// function Greeting({name, language}) {
+//   // console.log("props:", props);
+// //  const {name, language} = props;
+
+//   return (  
 //     <section>
-//       <h2>Hello, {props.name}!</h2>
-//       <p>Your favorite language is {props.language}.</p>
+//       <h2>Hello, {name}!</h2>
+//       <p>Your favorite language is {language}.</p>
 //     </section>
 //   );
 // }
@@ -29,7 +29,7 @@ export default function App(props) {
 //     <main>
 //       <h1>Props Example</h1>
 
-//      <Greeting name="Maya" language="JavaScript" schoolStanding="Junior" />
+//      <Greeting name="Maya" language="JavaScript" schoolStanding="Junior" timsattribute="value" />
 //      <Greeting name="Diego" language="Python" schoolStanding="Senior" />
 //      <Greeting name="Ava" language="Java" schoolStanding="Sophomore" />
 //     </main>
@@ -72,6 +72,7 @@ export default function App(props) {
 //       <Greeting
 //         name={student.name}
 //         language={student.language}
+//         key={student.name}
 //       />
 //     );
 //   });
@@ -98,6 +99,11 @@ export default function App(props) {
 //   );
 // }
 
+import React from 'react';
+import { HeaderBar } from './HeaderBar';
+import { ChannelList } from './ChannelList';
+import { ChatPane } from './ChatPane';
+
 // // Example Slide 14
 
 // export default function App(props) {
@@ -108,7 +114,7 @@ export default function App(props) {
 //   );
 // }
 
-// Example Slide 15
+// // Example Slide 15
 // export default function App(props) {
 //   return (
 //     <div>
@@ -128,25 +134,25 @@ export default function App(props) {
 //   );
 // }
 
-// // Example Slide 24
+// Example Slide 24
 
-// export default function App(props) {
+export default function App(props) {
 
-//   return (
-//     <div>
+  return (
+    <div>
 
-//       <HeaderBar />
-//       <div className='row'>
-//         <div className='col-2'>
-//           <ChannelList />
-//         </div>
-//         <main className='col'>
-//           <ChatPane />
-//         </main>
-//       </div>
-//     </div>
-//   )
-// };
+      <HeaderBar />
+      <div className='row'>
+        <div className='col-4'>
+          <ChannelList />
+        </div>
+        <main className='col'>
+          <ChatPane />
+        </main>
+      </div>
+    </div>
+  )
+};
 
 
 // // Example Slide 28 

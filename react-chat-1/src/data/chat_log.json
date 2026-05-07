@@ -46,5 +46,13 @@
       "text": "Who?",
       "timestamp": 1320224640000,
       "channel": "random"
+  },
+  {
+      "userId": "bat",
+      "userName": "Bat",
+      "userImg": "/img/Owl.png",
+      "text": "Boo?",
+      "timestamp": 1320224640001,
+      "channel": "random"
   }
 ]
