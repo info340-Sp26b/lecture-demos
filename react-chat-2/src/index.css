@@ -10,16 +10,6 @@ html, body, #root, #root>div {
 }
 
 
-/** Channel Nav **/
-.channel-nav ul {
-  list-style-type: none;
-}
-
-.channel-nav a {
-  color: white;
-}
-
-
 /** Messages **/
 .scrollable-pane {
   /* will enable it to scroll content */

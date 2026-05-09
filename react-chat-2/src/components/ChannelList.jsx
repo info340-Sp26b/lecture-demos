@@ -23,7 +23,7 @@ export function ChannelList(props) {
   })
 
   return (
-    <nav className="text-light bg-secondary h-100 py-3 channel-nav px-2">
+    <nav className="text-light bg-secondary h-100 py-3 px-2">
       {linkElemArray}
     </nav>
   )
