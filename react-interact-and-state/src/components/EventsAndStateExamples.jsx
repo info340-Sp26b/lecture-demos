@@ -1,4 +1,44 @@
-// (I) Events and State examples
+
+// (1) Simple event listener example
+
+// (A) Add onClick event listener to button
+import { useState } from "react";
+export function MyButton(props) {
+
+  const handleClick = (event) => {
+    console.log("clicky clicky");
+  }
+
+  return <button className="btn btn-outline-danger" onClick={handleClick}>Click me!</button>;
+}
+
+// // (B) Add count to the button text, but it doesn't update when we click the button!
+// export function MyButton(props) {
+//   let clickCount = 0;
+
+//   const handleClick = (event) => {
+//     console.log("clicky clicky");
+//   }
+
+//   return <button className="btn btn-outline-danger" onClick={handleClick}>Click me! ({clickCount})</button>;
+// }
+
+// // // (C) - Use useState hook to manage click count
+// import { useState } from "react";
+
+// export function MyButton(props) {
+//   const [clickCount, setClickCount] = useState(0);
+
+//   const handleClick = (event) => {
+//     console.log("clicky clicky");
+//     setClickCount(clickCount + 1);
+//   }
+
+//   return <button className="btn btn-outline-danger" onClick={handleClick}>Click me! ({clickCount})</button>;
+// }
+
+
+// (II) Events and State example with primitive value in state
 export function PizzaCounter(props) {
 
   const numPizzas = 3;
@@ -76,17 +116,21 @@ export function PizzaCounter(props) {
 // }
 
 
-// // (II) Arrays and Objects as State example
+// // (III) Arrays and Objects as State example
 
-import { useState } from "react";
+// // import { useState } from "react";
 
-export function PizzaList() {
+export function PizzaList(props) {
 
-  const [pizzaArray, setPizzaArray] = useState([
-    "Cheese",
-    "Pepperoni",
-    "Hawaiian"
-  ]);
+  // const [pizzaArray, setPizzaArray] = useState([
+  //   "Cheese",
+  //   "Pepperoni",
+  //   "Hawaiian"
+  // ]);
+
+
+  console.log("pizzaType props:", props.pizzaArray);
+    const [pizzaArray, setPizzaArray] = useState(props.pizzaArray);
 
   function handleAddPizza() {
 
@@ -127,7 +171,7 @@ export function PizzaList() {
     <div>
 
       <h2 className="text-light bg-success px-1">
-        Pizza Type Count: {pizzaArray.length}
+        Type of PizzasCount: {pizzaArray.length}
       </h2>
 
       <button
@@ -147,7 +191,13 @@ export function PizzaList() {
       </button>
 
       <ul className="mt-3">
+
+        {pizzaArray.length === 0 &&
+          <p>No pizzas left!</p>
+        }
+
         {pizzaListItems}
+
       </ul>
 
     </div>
