@@ -122,15 +122,15 @@ export function PizzaCounter(props) {
 
 export function PizzaList(props) {
 
-  // const [pizzaArray, setPizzaArray] = useState([
-  //   "Cheese",
-  //   "Pepperoni",
-  //   "Hawaiian"
-  // ]);
+  const [pizzaArray, setPizzaArray] = useState([
+    "Cheese",
+    "Pepperoni",
+    "Hawaiian"
+  ]);
 
 
-  console.log("pizzaType props:", props.pizzaArray);
-    const [pizzaArray, setPizzaArray] = useState(props.pizzaArray);
+  // console.log("pizzaType props:", props.pizzaArray);
+  //   const [pizzaArray, setPizzaArray] = useState(props.pizzaArray);
 
   function handleAddPizza() {
 
