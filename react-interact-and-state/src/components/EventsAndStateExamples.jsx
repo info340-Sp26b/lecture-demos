@@ -1,16 +1,16 @@
 
 // (1) Simple event listener example
 
-// (A) Add onClick event listener to button
-import { useState } from "react";
-export function MyButton(props) {
+// // (A) Add onClick event listener to button
+// import { useState } from "react";
+// export function MyButton(props) {
 
-  const handleClick = (event) => {
-    console.log("clicky clicky");
-  }
+//   const handleClick = (event) => {
+//     console.log("clicky clicky");
+//   }
 
-  return <button className="btn btn-outline-danger" onClick={handleClick}>Click me!</button>;
-}
+//   return <button className="btn btn-outline-danger" onClick={handleClick}>Click me!</button>;
+// }
 
 // // (B) Add count to the button text, but it doesn't update when we click the button!
 // export function MyButton(props) {
@@ -18,36 +18,44 @@ export function MyButton(props) {
 
 //   const handleClick = (event) => {
 //     console.log("clicky clicky");
+//     clickCount++;
 //   }
 
 //   return <button className="btn btn-outline-danger" onClick={handleClick}>Click me! ({clickCount})</button>;
 // }
 
-// // // (C) - Use useState hook to manage click count
-// import { useState } from "react";
+// // (C) - Use useState hook to manage click count
+import { useState } from "react";
 
-// export function MyButton(props) {
-//   const [clickCount, setClickCount] = useState(0);
+export function MyButton(props) {
+  const [clickCount, setClickCount] = useState(0);
 
-//   const handleClick = (event) => {
-//     console.log("clicky clicky");
-//     setClickCount(clickCount + 1);
-//   }
+  // console.log(clickCount);
 
-//   return <button className="btn btn-outline-danger" onClick={handleClick}>Click me! ({clickCount})</button>;
-// }
+  const handleClick = (event) => {
+    // console.log("clicky clicky");
+    setClickCount(clickCount + 1);
+    // console.log(clickCount);
+  }
+
+  return <button className="btn btn-outline-danger" onClick={handleClick}>Click me! ({clickCount})</button>;
+}
 
 
 // (II) Events and State example with primitive value in state
 export function PizzaCounter(props) {
 
-  const numPizzas = 3;
+  const [numPizzas, setNumPizzas] = useState(3);
 
     function handleAddPizza() {
+    setNumPizzas(numPizzas + 1);
+    console.log(numPizzas);
     console.log("Adding a slice!");
   }
 
   function handleRemovePizza() {
+    setNumPizzas(numPizzas - 1);
+    console.log(numPizzas); 
     console.log("Removing slice!");
   }
 
@@ -55,7 +63,7 @@ export function PizzaCounter(props) {
 
   for(let i = 0; i < numPizzas; i++) {
     pizzaArray.push(
-      <span>🍕</span>
+      <span key={i}>🍕</span>
     );
   }
 
@@ -134,11 +142,11 @@ export function PizzaList(props) {
 
   function handleAddPizza() {
 
-    pizzaArray.push("Veggie");
-    setPizzaArray(pizzaArray);
-    // const pizzaArrayCopy = [...pizzaArray];
-    // pizzaArrayCopy.push("Veggie");
-    // setPizzaArray(pizzaArrayCopy);
+    // pizzaArray.push("Veggie");
+    // setPizzaArray(pizzaArray);
+    const pizzaArrayCopy = [...pizzaArray];
+    pizzaArrayCopy.push("Veggie");
+    setPizzaArray(pizzaArrayCopy);
     console.log("Adding a pizza!");
 
   }
@@ -147,11 +155,11 @@ export function PizzaList(props) {
   function handleRemovePizza() {
 
     if(pizzaArray.length > 0) {
-        pizzaArray.pop();
-        setPizzaArray(pizzaArray);
-        // const pizzaArrayCopy = [...pizzaArray];
-        // pizzaArrayCopy.pop();
-        // setPizzaArray(pizzaArrayCopy);
+        // pizzaArray.pop();
+        // setPizzaArray(pizzaArray);
+        const pizzaArrayCopy = [...pizzaArray];
+        pizzaArrayCopy.pop();
+        setPizzaArray(pizzaArrayCopy);
         console.log("Removing a pizza!");
     }
   }
