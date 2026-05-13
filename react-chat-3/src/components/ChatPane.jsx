@@ -69,7 +69,7 @@ function MessageItem(props) {
   )
 }
 
-// // Slide 4, 5 Example code for on-off questions (conditional rendering, checkbox filter )
+// // Slide 5 and 6 Example code for on-off questions (conditional rendering, checkbox filter )
 
 // import React, { useState } from 'react';
 
